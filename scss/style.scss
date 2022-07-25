@@ -1,0 +1,35 @@
+@import 'partials/mixins.scss';
+@import 'partials/functions.scss';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+}
+
+div {
+    width: 200px;
+    height: 200px;
+    background-color: beige;
+}
+
+div:nth-of-type(1) {
+    @include border-main;
+}
+
+div:nth-of-type(2) {
+    /* nie jestem pewien czy zmiana z 20px na 5px powinna działać na zasadzie nadpisania, ale działa*/
+    @include border-main(green, 20px);
+}
+
+div:nth-of-type(3) {
+    /* wybierz jeden z dostępnych selektorów ([O]dejmowanie, [DZ]ielenie, [D]odawanie, [M]nozenie)*/
+    width: dzialanie(600, 2, 'dz');
+    height: dzialanie(600, 2, 'dz');
+}

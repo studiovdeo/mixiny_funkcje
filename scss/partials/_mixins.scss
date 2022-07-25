@@ -1,0 +1,9 @@
+@mixin border-main ($border-color: red, $border-size: 1px, $border-style: solid) {
+    border-width: $border-size;
+    border-color: $border-color;
+    border-style: $border-style;
+
+    @if $border-size > 5px {
+        border-width: 5px;
+    }
+}

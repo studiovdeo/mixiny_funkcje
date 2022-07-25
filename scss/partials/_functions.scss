@@ -1,0 +1,25 @@
+@use 'sass:math';
+
+@function dzialanie($num1, $num2, $type) {
+
+    @if $type == 'm' {
+        $result: ($num1 * $num2);
+        @return ($result + px);
+    }
+
+    @if $type == 'dz' {
+        $result: math.div($num1, $num2);
+        @return ($result + px);
+    }
+
+    @if $type == 'd' {
+        $result: ($num1 + $num2);
+        @return ($result + px);
+    }
+
+    @if $type == 'o' {
+        $result: ($num1 - $num2);
+        @return ($result + px);
+    }
+    
+}

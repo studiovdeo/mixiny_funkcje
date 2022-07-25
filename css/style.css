@@ -1,0 +1,40 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+}
+
+div {
+  width: 200px;
+  height: 200px;
+  background-color: beige;
+}
+
+div:nth-of-type(1) {
+  border-width: 1px;
+  border-color: red;
+  border-style: solid;
+}
+
+div:nth-of-type(2) {
+  /* nie jestem pewien czy zmiana z 20px na 5px powinna działać na zasadzie nadpisania, ale działa*/
+  border-width: 20px;
+  border-color: green;
+  border-style: solid;
+  border-width: 5px;
+}
+
+div:nth-of-type(3) {
+  /* wybierz jeden z dostępnych selektorów ([O]dejmowanie, [DZ]ielenie, [D]odawanie, [M]nozenie)*/
+  width: 300px;
+  height: 300px;
+}
+
+/*# sourceMappingURL=style.css.map */
